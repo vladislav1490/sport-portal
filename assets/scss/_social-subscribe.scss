@@ -1,0 +1,110 @@
+.social-subscribe {
+    background-color: $color-white; 
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 5%;
+        line-height: 100%;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        color: $color-dark-text;
+    }
+}
+
+.social-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F01B0D;
+    padding: 40px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 180px;
+
+    .social-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 12px;
+    }
+}
+
+.subscribe-block {
+    background-color: #121212;
+    padding: 40px;
+    margin-left: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: 180px;
+}
+
+.subscribe-form {
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    gap: 24px;
+
+    &__group {
+        position: relative;
+        flex-grow: 1;
+    }
+
+    &__input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #4A4A4A;
+        padding: 10px 0;
+        color: $color-white;
+        font-size: 14px;
+        font-weight: 300;
+        outline: none;
+
+        &:focus ~ .subscribe-form__label,
+        &:valid ~ .subscribe-form__label {
+            transform: translateY(-20px);
+            font-size: 12px;
+            color: #888;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        color: #888;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    &__button {
+        background-color: #F01B0D;
+        color: $color-white;
+        border: none;
+        border-radius: 100px;
+        padding: 12px 30px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        flex-shrink: 0;
+
+        &:hover {
+            background-color: darken(#D74339, 20%);
+        }
+    }
+}

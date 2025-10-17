@@ -1,0 +1,43 @@
+.authors {
+    padding: 40px 0;
+    .container {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+.author-card {
+    color: $color-dark-text;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__photo {
+        margin-right: 40px;
+    }
+
+    &__info {
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__role {
+        display: block;
+        font-size: 14px;
+        color: #6c757d;
+        margin-top: 5px;
+        text-transform: uppercase;
+    }
+
+    &__quote {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-top: auto;
+    }
+}
