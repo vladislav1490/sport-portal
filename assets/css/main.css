@@ -27,14 +27,6 @@ body.lock-scroll {
   background-repeat: no-repeat;
 }
 
-.hero-bg {
-  background-image: linear-gradient(rgba(10, 30, 60, 0.5), rgba(10, 30, 60, 0.5)), url(/assets/img/hero-bg.png);
-}
-
-.promo-bg {
-  background-image: linear-gradient(rgba(10, 30, 60, 0.5), rgba(10, 30, 60, 0.5)), url(https://unsplash.it/1920/1080?image=20);
-}
-
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -117,27 +109,51 @@ body.lock-scroll {
 }
 
 .hero {
-  padding-top: 150px;
-  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
-  text-align: left;
+  padding-top: 150px;
+  padding-bottom: 60px;
   color: #FFFFFF;
+  text-align: left;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
 }
 .hero__container {
+  position: relative;
+  z-index: 3;
   width: 100%;
 }
 .hero__category {
   display: block;
-  text-transform: uppercase;
   margin-bottom: 15px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 .hero__title {
-  font-size: 28px;
-  line-height: 1.2;
   margin: 0;
   max-width: 100%;
+  font-size: 28px;
+  line-height: 1.2;
 }
 
 .category-nav {
